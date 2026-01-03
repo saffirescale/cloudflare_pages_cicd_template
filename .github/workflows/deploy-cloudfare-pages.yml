@@ -19,4 +19,3 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: cloudflare-pages-cicd-template
           directory: site
-          create: true
