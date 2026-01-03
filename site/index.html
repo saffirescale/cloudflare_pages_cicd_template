@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaffireScale</title>
+  <style>
+    :root {
+      --bg-color: #0d1117;
+      --text-color: #c9d1d9;
+      --header-bg: #161b22;
+      --header-text: #58a6ff;
+      --card-bg: #21262d;
+      --accent: #58a6ff;
+    }
+    [data-theme="light"] {
+      --bg-color: #f4f4f4;
+      --text-color: #333;
+      --header-bg: #333;
+      --header-text: #fff;
+      --card-bg: #fff;
+      --accent: #007acc;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 2px solid var(--accent);
+    }
+    header h1 {
+      margin: 10px 0 5px;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: var(--accent);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: var(--accent);
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 5px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project {
+      background: var(--card-bg);
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+    }
+    .project h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+    a {
+      color: var(--accent);
+    }
+    footer {
+      text-align: center;
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 15px;
+      margin-top: 20px;
+      border-top: 2px solid var(--accent);
+    }
+    .theme-toggle {
+      margin-top: 10px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: var(--accent);
+      color: #fff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Profile Photo">
+    <h1>Saffire Scale</h1>
+    <p>Python  |  Automation  |  DevSecOps  |  Cloud </p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+   <p>
+At <strong>Saffire Scale</strong>, we design and deliver production-ready cloud and automation systems that help teams move faster, safer, and with confidence.</p>
+<p>We specialize in Python-driven automation, DevOps architecture, and cloud infrastructure—transforming fragmented setups into clean, scalable, and cost-efficient systems. From startup MVPs to growing platforms, we build solutions that are easy to operate today and ready to scale tomorrow.</p>
+<p>Our work goes beyond setup. We focus on repeatability, reliability, and clarity, ensuring every pipeline, deployment, and automation is documented, auditable, and built for long-term use. Whether it’s CI/CD pipelines, EC2-based deployments, EKS-ready architectures, or cloud security automation, we deliver systems teams can trust in production.</p>
+<p><strong>What We Do</strong></p>
+<ul>
+  <li>Python automation for cloud operations, cost optimization, monitoring, and reporting</li>
+  <li>DevOps and CI/CD pipelines with versioning, approvals, and rollback strategies</li>
+  <li>AWS cloud infrastructure designed for performance, security, and cost control</li>
+  <li>Production readiness including monitoring, guardrails, and clear documentation</li>
+</ul>
+<p><strong>How We Work</strong></p>
+<ul>
+  <li>System-first thinking focused on maintainability and long-term reliability</li>
+  <li>Automation by default to reduce manual effort and operational risk</li>
+  <li>Clear documentation and ownership for smooth handovers</li>
+  <li>Scalable-by-design architecture, from simple EC2 setups to EKS-based platforms</li>
+</ul>
+<p><strong>Our Mission</strong><br>To help startups and growing teams build reliable cloud systems without over-engineering, enabling them to scale securely, efficiently, and sustainably.
+</p>
+</section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      
+      <div class="project">
+        <h3>CloudGuard – AWS Cost & Stability Audit</h3>
+        <p><b>CloudGuard</b> is a short, focused AWS audit designed to help startups and small teams understand where their cloud money is going and identify stability risks — without modifying or deleting any resources.
+       <br>
+       This repository contains the methodology and reference implementation used during CloudGuard engagements by <b>Saffire Scale</b>.</p>
+        <!-- <img src="images/pic-1.png" alt="pic1" width="350" height="60"> -->
+        <a href="https://github.com/saffirescale/CloudGuard_AWS_Cost_Stability_Template" target="_blank">View on GitHub</a>
+        <!-- <a href="project_1.html" target="">View Details</a> -->
+      </div>
+
+      <div class="project">
+        <h3>LaunchReady – Secure EC2 MVP Deployment</h3>
+        <p><b>LaunchReady</b> is a safe, minimal, and production-ready AWS EC2 foundation designed for startups, MVPs, and teams that want a reliable cloud setup without unnecessary complexity.
+        <br>
+        It provides a clean starting point for running applications on AWS with strong emphasis safety and control. Designed by <b>Saffirescale</b>.</p>
+        <a href="https://github.com/saffirescale/Launchready_EC2_Deployment_Template" target="_blank">View on GitHub</a>
+        <!-- <a href="project_1.html" target="">View Details</a> -->
+      </div>
+
+      
+      <!-- <div class="project">
+        <h3>CI-CD-pipeline-to-push-image-to-docker-hub</h3>
+        <p>To demonstrate CI/CD Pipeline for a Sample flask App using Github actions to build and push docker image to docker-hub repository.</p>
+        <img src="images/pic-1.png" alt="pic1" width="350" height="60">
+        <br>
+        <a href="https://github.com/saffirescale/CI-CD-pipeline-to-push-image-to-docker-hub" target="_blank">View on GitHub</a>
+        <br>
+        <a href="project_1.html" target="">View Details</a>
+      </div>
+
+      <div class="project">
+        <h3>Github-Actions-Sonarqube-Quality-Notification</h3>
+        <p>To demonstrate CI/CD Pipeline with sonarqube quality check on code push in the github with notification email having sonar cloud link.</p>
+        <img src="images/pic-1.png" alt="pic2" width="350" height="60">
+        <br>
+        <a href="https://github.com/saffirescale/github-sonarqube-automation" target="_blank">View on GitHub</a>
+        <br>
+        <a href="project_2.html" target="">View Details</a>
+      </div>
+
+      <div class="project">
+        <h3>CI-CD-pipeline-to-push-image-to-docker-hub</h3>
+        <p>To demonstrate CI/CD Pipeline for a Sample flask App using Github actions to build and push docker image to docker-hub repository.</p>
+        <img src="images/pic-1.png" alt="pic3" width="350" height="60">
+        <br>
+        <a href="https://github.com/saffirescale/CI-CD-pipeline-to-push-image-to-docker-hub" target="_blank">View on GitHub</a>
+        <br>
+        <a href="project_3.html" target="">View Details</a>
+      </div>
+
+      <div class="project">
+        <h3>CI-CD-pipeline-to-push-image-to-docker-hub</h3>
+        <p>To demonstrate CI/CD Pipeline for a Sample flask App using Github actions to build and push docker image to docker-hub repository.</p>
+        <img src="images/pic-1.png" alt="pic4" width="350" height="60">
+        <br>
+        <a href="https://github.com/saffirescale/CI-CD-pipeline-to-push-image-to-docker-hub" target="_blank">View on GitHub</a>
+        <br>
+        <a href="project_4.html" target="">View Details</a>
+      </div> -->
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:hello@saffirescale.com">hello@saffirescale.com</a></p>
+    <p>GitHub: <a href="https://github.com/saffirescale" target="_blank">github.com/saffirescale</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/saffire-scale-cloud-engineering-a58b913a2" target="_blank">linkedin.com/in/saffirescale</a></p>
+    <p>Official site: <a href="https://saffirescale.com" target="_blank">Saffirescale.com</a></p>
+</section>
+
+  
+  <footer>
+    <p>&copy; 2025 [Saffire-Scale]</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const currentTheme = body.getAttribute("data-theme");
+      if (currentTheme === "light") {
+        body.removeAttribute("data-theme");
+      } else {
+        body.setAttribute("data-theme", "light");
+      }
+    }
+  </script>
+</body>
+</html>
